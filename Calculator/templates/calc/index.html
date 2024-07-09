@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Calculator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Django Calculator App</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">About</a>
+                </li>
+                
+              </ul>
+              
+            </div>
+        </nav>
+
+    
+    
+        <div class = "row">
+            <div class = "col-md-6" style = "margin : 0 auto;">
+                
+                        <form method="POST">
+                            {% csrf_token %} 
+                             <label>Value 1</lable>
+                             <input type ="text" name="num1" class="form-control"><br>
+                             <lable>Select Operator</lable>
+                             <select name = "opr" class="form-control">
+                                <option value="+">+</option>
+                                <option value="-">-</option>
+                                <option value="*">*</option>
+                                <option value="/">/</option>
+                             </select><br>
+                             <label>Value 2</lable>
+                             <input type ="text" name="num2" class="form-control"><br>
+
+                            <button type="submit">Calculate</button>
+                            <lable>Output</lable>
+                            <input type ="text" value= "{{c}}" class="form-control">
+                            
+
+                        </form>
+            </div>
+        </div>
+  
+        
+        <script src="" async defer></script>
+        
+    </body>
+</html>
